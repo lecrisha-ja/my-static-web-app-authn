@@ -1,5 +1,5 @@
 {
-"routes": [
+  "routes": [
     {
       "route": "/api/products/*",
       "allowedRoles": ["authenticated"]
@@ -8,5 +8,9 @@
       "route": "/.auth/login/aad",
       "statusCode": 404
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
+  }
 }
